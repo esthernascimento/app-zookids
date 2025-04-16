@@ -8,4 +8,10 @@ export default StyleSheet.create({
       justifyContent: 'center',
       gap: 100,
     },
+
+    img: {
+      width: 150,
+      height: 150,
+      borderRadius: 150,
+    },
   });
