@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text, View, Button, TextInput } from 'react-native';
+import { Text, View, Button, TextInput, Pressable } from 'react-native';
 import styles from './style';
 import { useNavigation } from '@react-navigation/native';
+import React, { useState } from 'react';
 
 
 export default function Login() {
@@ -24,11 +25,13 @@ export default function Login() {
           <TextInput
             style={styles.input}
             placeholder="Digite sua senha"
-            keyboardType='password'
+            secureTextEntry={true}
             value={senha}
             onChangeText={(text) =>setSenha(text)}
           />
-        <Button title='Home' onPress={ () => navigation.navigate('Home')}/>
+        <Pressable onPress={ () => navigation.navigate('Home')}>
+            <Text style={styles.btnHome}>Home</Text>
+        </Pressable>
         <StatusBar style="auto" />
       </View>
     );

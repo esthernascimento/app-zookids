@@ -1,15 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Pressable } from 'react-native';
 import styles from './style';
-import { Button } from 'react-native-web';
 import { useNavigation } from '@react-navigation/native';
+import * as Animatable from 'react-native-animatable';
 
 export default function Splash() {
     const navigation = useNavigation();
     return (
       <View style={styles.container}>
-        <Image source={require('../../../assets/capivara-fofa.jpg')} style={styles.img}/>
-        <Button title='Entrar' onPress={ () => navigation.navigate('BemVindo')}/>
+        <Animatable.View animation="bounceInDown">
+          <Image source={require('../../../assets/capivara-fofa.jpg')} style={styles.img}/>
+        </Animatable.View>
+
+         <Pressable onPress={ () => navigation.navigate('BemVindo')}>
+            <Text style={styles.btnEntrar}>Entrar</Text>
+        </Pressable>
         <StatusBar style="auto" />
       </View>
     );
