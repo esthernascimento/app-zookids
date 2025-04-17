@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text, View, Button, ImageBackground } from 'react-native';
+import { Text, View, Pressable, ImageBackground } from 'react-native';
 import styles from './style';
 import { useNavigation } from '@react-navigation/native';
+import * as Animatable from 'react-native-animatable';
 
 export default function BemVindo() {
     const navigation = useNavigation();
@@ -14,14 +15,18 @@ export default function BemVindo() {
             style={styles.background}
             resizeMode='cover'>
 
-          <View style={styles.titulo}>
+          <Animatable.View animation="rubberBand" style={styles.titulo}>
             <Text style={styles.text}>Seja Bem vindo(a) ao App Zookids!!!</Text>
             <Text style={styles.text}>Faça Login ou Cadastre-se para para entrar nessa aventura!</Text>
-          </View>
+          </Animatable.View>
           
           <View style={styles.botoes}>
-              <Button title='Login' onPress={ () => navigation.navigate('Login')}/>
-              <Button title='Cadastre-se' onPress={ () => navigation.navigate('Cadastro')}/>
+              <Pressable onPress={ () => navigation.navigate('Login')}>
+                  <Animatable.Text animation="bounceInLeft" delay={1000} style={styles.btn}>Login</Animatable.Text>
+               </Pressable>
+               <Pressable onPress={ () => navigation.navigate('Cadastro')}>
+                  <Animatable.Text animation="bounceInRight" delay={2000} style={styles.btn}>Cadastro</Animatable.Text>
+               </Pressable>
           </View>
 
         </ImageBackground>

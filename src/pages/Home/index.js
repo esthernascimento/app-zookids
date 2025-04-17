@@ -54,12 +54,19 @@ export default function Home() {
     
     return (
       <View style={styles.container}>
-        <View style={styles.containerTitulo}>
-          <Text style={styles.titulo}>Territórios</Text>
-          <Text style={styles.titulo}>Clique em qual Território deseja explorar</Text>
-        </View>
+          <ImageBackground
+             source={require('../../../assets/bg-floresta.jpg')}
+             opacity={0.4}
+             style={styles.background}
+             resizeMode='cover'>
+
+          <View style={styles.containerTitulo}>
+            <Text style={styles.titulo}>Territórios</Text>
+            <Text style={styles.titulo2}>Clique em qual Território</Text>
+            <Text style={styles.titulo2}>deseja explorar!</Text>
+         </View>
         
-        <FlatList
+         <FlatList
           data={territorios}
           renderItem={({ item, index }) => (
             <Pressable 
@@ -67,7 +74,7 @@ export default function Home() {
              style={styles.item}>
               <ImageBackground
                 source={item.imagem}
-                resizeMode="contain"
+                resizeMode="stretch"
                 style={styles.background}
               >
                 <Text style={styles.nomeTerritorio}> {item.nomeTerritorio}</Text>
@@ -78,7 +85,10 @@ export default function Home() {
             </Pressable>)}
             keyExtractor={(item) => item.id}
             numColumns={2}         
-       />    
+         />    
+
+        </ImageBackground>
+        
       </View> 
     );
   };

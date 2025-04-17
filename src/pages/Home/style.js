@@ -15,25 +15,37 @@ export default StyleSheet.create({
       alignItems: 'center',
       width: '100%',
       height: '100%',
+      padding: 20,
       
     },
 
     containerTitulo: {
       alignItems: 'center',
       justifyContent: 'center',
-      gap: 2,
       marginTop: 30,
       
     },
 
     titulo: {
-      fontSize: 15,
+      fontSize: 30,
       fontWeight: 'bold',
       color: '#fff',
       alignItems: 'center',
       textTransform: 'uppercase',
-      backgroundColor: '#A0522D',
+      backgroundColor: '#3E7F33',
       padding: 10,
+      borderRadius: 10,
+
+    },
+
+    titulo2: {
+      fontSize: 12,
+      fontWeight: 'bold',
+      color: '#fff',
+      alignItems: 'center',
+      textTransform: 'uppercase',
+      backgroundColor: '#006533',
+      padding: 5,
       borderRadius: 10,
 
     },
@@ -48,11 +60,14 @@ export default StyleSheet.create({
 
     item: {
       width: 200,
-      height: 300,
+      height: 350,
       borderRadius: 10,
       overflow: 'hidden',
       border:  'none',
-      borderWidth: 2,
-      alignItems: 'center',
+    },
+
+    texto: {
+      alignSelf: 'flex-start',
+
     }
   });
