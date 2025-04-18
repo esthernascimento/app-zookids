@@ -3,7 +3,6 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#6B8E23',
       alignItems: 'center',
       justifyContent: 'center',
       color: '#fff',
@@ -20,23 +19,25 @@ export default StyleSheet.create({
     titulo: {
       alignItems: 'center',
       justifyContent: 'center',
-      gap: 5,
-      marginBottom: 500,
+      marginTop: 50,
     },
 
-    text: {
-      fontSize: 18,
-      fontWeight: 'bold',
-      color: '#6B8E23',
-      backgroundColor: '#fff',
-      textAlign: 'center',
-      padding: 5,
+
+    img: {
+      width: 150,
+      height: 150,
+    },
+
+    img2: {
+      width: 300,
+      height: 300,
+      marginTop: 200,
     },
 
     botoes: {
         flexDirection: 'row',
-        marginTop: 50,
         gap: 50,
+        marginTop: 20,
     },
 
     btn: {

@@ -6,12 +6,22 @@ export default StyleSheet.create({
       backgroundColor: '#F6EEDF',
       alignItems: 'center',
       justifyContent: 'center',
-      gap: 20,
+      gap: 30,
+      position: 'relative',
+    },
+
+    imgVoltar: {
+      width: 30,
+      height: 30,
+      right: 150,
+      bottom: 90,
+      
     },
 
     containerTitulo: {
       alignItems: 'center',
       justifyContent: 'center',
+      bottom: 50,
     },
 
     text: {
@@ -42,6 +52,8 @@ export default StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
       gap: 20,
+      bottom: 50,
+      
     },
 
     input: {
@@ -56,6 +68,13 @@ export default StyleSheet.create({
       padding: 10,
     },
 
+    imgMacaco: {
+      width: 200,
+      height: 200,
+      position: 'absolute',
+      top: -80,
+    },
+
     btnHome: {
       fontSize: 18,
       fontWeight: 'bold',
@@ -65,8 +84,7 @@ export default StyleSheet.create({
       borderColor: '#A0522D',
       padding: 10,
       borderRadius: 10,
-      textTransform: 'uppercase',
-      marginTop: 150,  
-
+      textTransform: 'uppercase', 
+      marginTop: 100, 
     }
   });
