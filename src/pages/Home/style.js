@@ -19,6 +19,13 @@ export default StyleSheet.create({
       
     },
 
+    imgVoltar: {
+      width: 30,
+      height: 30,
+      right: 150,
+      bottom: 10, 
+    },
+
     containerTitulo: {
       alignItems: 'center',
       justifyContent: 'center',

@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text, View, Pressable, TextInput } from 'react-native';
+import { Text, View, Pressable, TextInput, Image } from 'react-native';
 import styles from './style';
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
+import * as Animatable from 'react-native-animatable';
 
 
 export default function Cadastro() {
@@ -16,6 +17,13 @@ export default function Cadastro() {
 
     return (
           <View style={styles.container}>
+
+              <Animatable.View animation="fadeInLeft">
+                  <Pressable onPress={ () => navigation.navigate('BemVindo')}>
+                   <Image source={require('../../../assets/voltar.png')} style={styles.imgVoltar}/>
+                  </Pressable>
+              </Animatable.View>
+
               <View style={styles.containerTitulo}> 
                 <Text style={styles.text}>Bem-Vindo(a)!</Text>
                 <Text style={styles.text2}>Cadastre-se</Text>

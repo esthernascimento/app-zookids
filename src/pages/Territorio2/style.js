@@ -11,6 +11,13 @@ export default StyleSheet.create({
     gap: 20,
   },
 
+  imgVoltar: {
+    width: 30,
+    height: 30,
+    right: 150,
+    bottom: 30, 
+  },
+
   titulo: {
     fontSize: 20,
     fontWeight: 'bold',

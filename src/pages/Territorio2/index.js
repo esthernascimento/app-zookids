@@ -4,6 +4,7 @@ import { FlatList, Image, Modal, Pressable } from 'react-native';
 import { useState } from 'react';
 import { ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import * as Animatable from 'react-native-animatable';
 
 
 export default function Territorio2() {
@@ -89,9 +90,13 @@ export default function Territorio2() {
 
     return (
       <View style={styles.container}>
-          <Pressable onPress={ () => navigation.navigate('Home')}>
-            <Text style={styles.btnVoltar}>Voltar</Text>
-         </Pressable> 
+
+          <Animatable.View animation="fadeInLeft">
+            <Pressable onPress={ () => navigation.navigate('Home')}>
+              <Image source={require('../../../assets/voltar.png')} style={styles.imgVoltar}/>
+            </Pressable>
+          </Animatable.View>
+
           <Text style={styles.titulo}>Território 2</Text>
           <FlatList
               data={dados}

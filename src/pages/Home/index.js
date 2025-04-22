@@ -1,9 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { Pressable, Text, View } from 'react-native';
+import { Image, Pressable, Text, View } from 'react-native';
 import styles from './style';
 import { useNavigation } from '@react-navigation/native';
 import { FlatList } from 'react-native-web';
 import { ImageBackground } from 'react-native';
+import * as Animatable from 'react-native-animatable';
+
 
 export default function Home() {
   const navigation = useNavigation();
@@ -59,6 +61,12 @@ export default function Home() {
              opacity={0.4}
              style={styles.background}
              resizeMode='cover'>
+
+          <Animatable.View animation="fadeInLeft">
+            <Pressable onPress={ () => navigation.navigate('BemVindo')}>
+              <Image source={require('../../../assets/voltar.png')} style={styles.imgVoltar}/>
+            </Pressable>
+          </Animatable.View>
 
           <View style={styles.containerTitulo}>
             <Text style={styles.titulo}>Territórios</Text>

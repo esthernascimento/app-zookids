@@ -9,6 +9,14 @@ export default StyleSheet.create({
       gap: 20,
     },
 
+    imgVoltar: {
+      width: 30,
+      height: 30,
+      right: 150,
+      bottom: 50,
+      
+    },
+
     containerTitulo: {
       alignItems: 'center',
       justifyContent: 'center',
