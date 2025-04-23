@@ -9,7 +9,6 @@ export default StyleSheet.create({
     },
 
     background: {
-      flex: 1,
       width: '100%',
       height: '100%',
       alignItems: 'center',
@@ -19,25 +18,28 @@ export default StyleSheet.create({
     titulo: {
       alignItems: 'center',
       justifyContent: 'center',
-      marginTop: 50,
     },
 
 
     img: {
       width: 150,
       height: 150,
+      position: 'relative',
+      bottom: 30,
     },
 
     img2: {
       width: 300,
       height: 300,
-      marginTop: 200,
+      position: 'relative',
+      top: 100,      
     },
 
     botoes: {
-        flexDirection: 'row',
-        gap: 50,
-        marginTop: 20,
+      flexDirection: 'row',
+      gap: 50,
+      position: 'relative',
+      top: 120,
     },
 
     btn: {

@@ -98,7 +98,8 @@ export default function Territorio1() {
                   <Text style={styles.nome}>{item.nome}</Text>
                   <Image source={item.imagem} style={styles.imagem}/>
               </Pressable>)}
-              keyExtractor={(item) => item.id}        
+              keyExtractor={(item) => item.id} 
+              numColumns={2}       
           />
 
             <Modal visible={modal} animationType='fade' style={styles.modal}>

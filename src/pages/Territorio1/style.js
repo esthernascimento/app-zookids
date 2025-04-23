@@ -32,12 +32,11 @@ export default StyleSheet.create({
   pressable: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 20,
-    width: 300,
+    margin: 10,
+    width: 180,
     backgroundColor: '#FFDEAD',
-    gap: 10,
     borderRadius: 10,
-    padding: 10,
+    padding: 20,
   },
 
   nome: {
@@ -47,8 +46,8 @@ export default StyleSheet.create({
   },
 
   imagem: {
-    width: 100,
-    height: 100,
+    width: 90,
+    height: 90,
   },
 
   background: {
