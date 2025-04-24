@@ -61,17 +61,12 @@ export default StyleSheet.create({
       fontSize: 18,
       fontWeight: 'bold',
       color: '#A0522D',
-      textTransform: 'uppercase',
-      marginBottom: 10,
+      textTransform: 'uppercase',   
+      
     },
 
     flatList: {
       marginLeft: 10,
-
-    },
-
-    containerNomeTerritorio: {
-      alignItems: 'flex-start'
     },
 
     item: {
@@ -82,8 +77,16 @@ export default StyleSheet.create({
       border:  'none',
     },
 
-    texto: {
-      alignSelf: 'flex-start',
+    containerNomeTerritorio: {
+      display: 'flex',
+      position: 'absolute',
+      top: 50,
+    },
 
-    }
+
+    containerAnimais: {
+      display: 'flex',
+      alignSelf: 'flex-start',
+ 
+    },
   });
