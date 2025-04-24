@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#B0C4DE',
+    backgroundColor: '#4682B4',
     paddingHorizontal: 20,
     paddingTop: 40,
     justifyContent: 'center',
@@ -22,7 +22,7 @@ export default StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     color: '#fff',
-    backgroundColor: '#4682B4',
+    backgroundColor: '#B0C4DE',
     padding: 10,
     borderRadius: 10,
     textTransform: 'uppercase',
