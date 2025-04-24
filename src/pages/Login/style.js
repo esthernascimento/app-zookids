@@ -52,8 +52,7 @@ export default StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
       gap: 20,
-      bottom: 50,
-      
+      bottom: 50,   
     },
 
     input: {

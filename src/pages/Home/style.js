@@ -65,8 +65,17 @@ export default StyleSheet.create({
       marginBottom: 10,
     },
 
+    flatList: {
+      marginLeft: 10,
+
+    },
+
+    containerNomeTerritorio: {
+      alignItems: 'flex-start'
+    },
+
     item: {
-      width: 200,
+      width: 190,
       height: 350,
       borderRadius: 10,
       overflow: 'hidden',

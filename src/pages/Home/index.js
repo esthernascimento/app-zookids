@@ -68,13 +68,14 @@ export default function Home() {
             </Pressable>
           </Animatable.View>
 
-          <View style={styles.containerTitulo}>
+          <Animatable.View animation="rubberBand" style={styles.containerTitulo}>
             <Text style={styles.titulo}>Territórios</Text>
             <Text style={styles.titulo2}>Clique em qual Território</Text>
             <Text style={styles.titulo2}>deseja explorar!</Text>
-         </View>
+         </Animatable.View>
         
          <FlatList
+         style={styles.flatList}
           data={territorios}
           renderItem={({ item, index }) => (
             <Pressable 
@@ -85,10 +86,15 @@ export default function Home() {
                 resizeMode="stretch"
                 style={styles.background}
               >
-                <Text style={styles.nomeTerritorio}> {item.nomeTerritorio}</Text>
-                {item.animais.map((animal, index) => (
-                  <Text key={index} style={styles.texto}>{animal}</Text>
-                ))}
+                <View style={styles.containerNomeTerritorio}>
+                   <Text style={styles.nomeTerritorio}> {item.nomeTerritorio}</Text>
+                </View>
+                <View style={styles.containerAnimais}>
+                  {item.animais.map((animal, index) => (
+                    <Text key={index} style={styles.texto}>{animal}</Text>
+                  ))}
+                </View>
+                
               </ImageBackground>
             </Pressable>)}
             keyExtractor={(item) => item.id}
