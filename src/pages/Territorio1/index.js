@@ -108,21 +108,22 @@ export default function Territorio1() {
           </Animatable.View>
           
 
-            <Modal visible={modal} animationType='fade' style={styles.modal}>
+            <Modal visible={modal} animationType='fade'>
                 <View style={styles.modal}>
                      <ImageBackground
-                         source={require('../../../assets/bg-floresta.jpg')}
+                         source={require('../../../assets/bg-safari.jpg')}
                          opacity={0.4}
                         style={styles.background}
-                        resizeMode='cover'>
+                        resizeMode='stretch'>
                     {animalSelecionado ? (
                     <>
-                     <Pressable onPress={voltar}>
-                        <Text style={styles.voltar}>Voltar</Text>
-                    </Pressable>
+                 
                     <Text style={styles.nomeSelecionado}>{animalSelecionado.nome}</Text>
                     <Image source={animalSelecionado.imagem} style={styles.imagemSelecionado} />
                     <Text style={styles.descSelecionado}>{animalSelecionado.descricao}</Text>
+                    <Pressable onPress={voltar}>
+                        <Text style={styles.voltar}>Voltar</Text>
+                    </Pressable>
                     </>
                     ) : null}
                     </ImageBackground>

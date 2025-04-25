@@ -57,6 +57,7 @@ export default StyleSheet.create({
     gap: 10,
   },
 
+
   nome: {
     fontSize: 16,
     fontWeight: 'bold',
@@ -69,7 +70,8 @@ export default StyleSheet.create({
   },
 
   background: {
-    flex: 1,
+    width: '100%',
+    height: 844,
     backgroundColor: '#fff',
     alignItems: 'center',
     padding: 20,
@@ -94,12 +96,13 @@ export default StyleSheet.create({
   },
 
   descSelecionado: {
-    fontSize: 22,
-    color: '#fff',
+    fontSize: 18,
+    color: '#A0522D',
+    backgroundColor: '#FFDEAD',
+    maxWidth: 300,
     fontWeight: 'bold',
     textAlign: 'justify',
     marginBottom: 20,
-    backgroundColor: '#6B8E23',
     borderRadius: 10,
     padding: 10,
   },
@@ -123,7 +126,6 @@ export default StyleSheet.create({
     borderRadius: 10,
     textTransform: 'uppercase',
     position: 'absolute',
-    top: 760,
     alignSelf: 'center',
   },
 });
