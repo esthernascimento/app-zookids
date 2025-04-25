@@ -85,7 +85,7 @@ export default function Territorio1() {
       <View style={styles.container}>
 
           <View style={styles.header}>
-            <Animatable.View animation="fadeInLeft">
+            <Animatable.View animation="fadeInLeft" delay={1000}>
                 <Pressable onPress={ () => navigation.navigate('Home')}>
                 <Image source={require('../../../assets/seta-voltar.png')} style={styles.imgVoltar}/>
                 </Pressable>
@@ -94,7 +94,7 @@ export default function Territorio1() {
             <Text style={styles.titulo}>Território 1</Text>
           </View>
           
-          <View style={styles.flatlist}>
+          <Animatable.View animation="fadeIn" style={styles.flatlist}>
             <FlatList
                 data={dados}
                 renderItem={({item}) => (
@@ -105,7 +105,7 @@ export default function Territorio1() {
                 keyExtractor={(item) => item.id} 
                 numColumns={2}       
             />
-          </View>
+          </Animatable.View>
           
 
             <Modal visible={modal} animationType='fade' style={styles.modal}>

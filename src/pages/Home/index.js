@@ -64,7 +64,7 @@ export default function Home() {
 
           <Animatable.View animation="fadeInLeft">
             <Pressable onPress={ () => navigation.navigate('BemVindo')}>
-              <Image source={require('../../../assets/voltar.png')} style={styles.imgVoltar}/>
+              <Image source={require('../../../assets/seta-voltar.png')} style={styles.imgVoltar}/>
             </Pressable>
           </Animatable.View>
 
