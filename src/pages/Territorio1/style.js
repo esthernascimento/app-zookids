@@ -11,11 +11,20 @@ export default StyleSheet.create({
     gap: 20,
   },
 
+  header: {
+    display: 'flex',
+    flexDirection: 'row',
+    position: 'absolute',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 10,
+    width: '100%',
+    top: 10,
+  },
+
   imgVoltar: {
     width: 30,
     height: 30,
-    right: 150,
-    bottom: 30, 
   },
 
   titulo: {
@@ -26,11 +35,19 @@ export default StyleSheet.create({
     padding: 10,
     borderRadius: 10,
     textTransform: 'uppercase',
-    marginBottom: 10,
+    position: 'absolute',
+    left: 120
+  },
+
+  flatlist: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 'auto',
+    marginTop: 50,
   },
 
   pressable: {
-    flexDirection: 'row',
     alignItems: 'center',
     margin: 10,
     width: 180,

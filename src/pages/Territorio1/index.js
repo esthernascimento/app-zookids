@@ -84,23 +84,29 @@ export default function Territorio1() {
     return (
       <View style={styles.container}>
 
-          <Animatable.View animation="fadeInLeft">
-            <Pressable onPress={ () => navigation.navigate('Home')}>
-              <Image source={require('../../../assets/voltar.png')} style={styles.imgVoltar}/>
-            </Pressable>
-          </Animatable.View>
+          <View style={styles.header}>
+            <Animatable.View animation="fadeInLeft">
+                <Pressable onPress={ () => navigation.navigate('Home')}>
+                <Image source={require('../../../assets/seta-voltar.png')} style={styles.imgVoltar}/>
+                </Pressable>
+            </Animatable.View>
 
-          <Text style={styles.titulo}>Território 1</Text>
-          <FlatList
-              data={dados}
-              renderItem={({item}) => (
-              <Pressable style={styles.pressable} onPress={() => showModal(item)}>
-                  <Text style={styles.nome}>{item.nome}</Text>
-                  <Image source={item.imagem} style={styles.imagem}/>
-              </Pressable>)}
-              keyExtractor={(item) => item.id} 
-              numColumns={2}       
-          />
+            <Text style={styles.titulo}>Território 1</Text>
+          </View>
+          
+          <View style={styles.flatlist}>
+            <FlatList
+                data={dados}
+                renderItem={({item}) => (
+                <Pressable style={styles.pressable} onPress={() => showModal(item)}>
+                    <Text style={styles.nome}>{item.nome}</Text>
+                    <Image source={item.imagem} style={styles.imagem}/>
+                </Pressable>)}
+                keyExtractor={(item) => item.id} 
+                numColumns={2}       
+            />
+          </View>
+          
 
             <Modal visible={modal} animationType='fade' style={styles.modal}>
                 <View style={styles.modal}>
