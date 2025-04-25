@@ -54,6 +54,7 @@ export default StyleSheet.create({
     backgroundColor: '#FFDEAD',
     borderRadius: 10,
     padding: 20,
+    gap: 10,
   },
 
   nome: {

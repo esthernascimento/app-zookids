@@ -55,12 +55,14 @@ export default StyleSheet.create({
     backgroundColor: '#FFDEAD',
     borderRadius: 10,
     padding: 10,
+    gap: 10,
   },
 
   nome: {
     fontSize: 16,
     fontWeight: 'bold',
     color: '#A0522D',
+    textAlign: 'center',
   },
 
   imagem: {

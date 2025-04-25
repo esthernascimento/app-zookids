@@ -11,11 +11,20 @@ export default StyleSheet.create({
     gap: 20,
   },
 
+  header: {
+    display: 'flex',
+    flexDirection: 'row',
+    position: 'absolute',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 10,
+    width: '100%',
+    top: 10,
+  },
+
   imgVoltar: {
     width: 30,
     height: 30,
-    right: 150,
-    bottom: 20, 
   },
 
   titulo: {
@@ -26,14 +35,23 @@ export default StyleSheet.create({
     padding: 10,
     borderRadius: 10,
     textTransform: 'uppercase',
-    marginBottom: 10,
+    position: 'absolute',
+    left: 120
+  },
+
+  flatlist: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 'auto',
+    marginTop: 50,
   },
 
   pressable: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignItems: 'center',
     marginBottom: 20,
-    width: 300,
+    width: 180,
     backgroundColor: '#FFDEAD',
     gap: 10,
     borderRadius: 10,
@@ -43,12 +61,13 @@ export default StyleSheet.create({
   nome: {
     fontSize: 16,
     fontWeight: 'bold',
+    textAlign: 'center',
     color: '#A0522D',
   },
 
   imagem: {
-    width: 100,
-    height: 100,
+    width: 80,
+    height: 80,
   },
 
   background: {

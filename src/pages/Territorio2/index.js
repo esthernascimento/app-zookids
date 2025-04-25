@@ -83,7 +83,7 @@ export default function Territorio2() {
         {
             id: 9,
             nome: 'Invertebrados',
-            imagem: require('../../../assets/formigueiro.png'),
+            imagem: require('../../../assets/invertebrados.png'),
             descricao: 'Os invertebrados são animais sem coluna vertebral, incluindo insetos, aracnídeos e moluscos. Eles desempenham papéis cruciais nos ecossistemas, como polinizadores, decompositores e presas para outros animais. Os invertebrados são essenciais para a saúde dos ecossistemas.'
         },
     ];
@@ -111,7 +111,9 @@ export default function Territorio2() {
                     <Image source={item.imagem} style={styles.imagem}/>
                 </Pressable>)}
                 keyExtractor={(item) => item.id}
-                numColumns={2}        
+                numColumns={2}
+                centerContent={true}
+                contentContainerStyle={{alignItems: 'center'}}          
             />
           </Animatable.View>
           
