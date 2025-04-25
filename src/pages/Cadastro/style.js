@@ -9,12 +9,27 @@ export default StyleSheet.create({
       gap: 20,
     },
 
-    imgVoltar: {
-      width: 30,
-      height: 30,
-      right: 150,
-      bottom: 50,
-      
+    header: {
+      width: '100%',
+      height: 100,
+    },
+
+    imgGalhos: {
+      width: '100%',
+      height: 200,
+      position: 'absolute',
+      bottom: -30,
+    },
+
+    containerImg: {
+      position: 'absolute',
+      top: -80,
+      left: -30,
+    },
+
+    imgPreguica: {
+      width: 150,
+      height: 150,
     },
 
     containerTitulo: {

@@ -15,16 +15,14 @@ export default function Login() {
     return (
       <View style={styles.container}>
 
-          <Animatable.View animation="fadeInLeft">
-            <Pressable onPress={ () => navigation.navigate('BemVindo')}>
-              <Image source={require('../../../assets/voltar.png')} style={styles.imgVoltar}/>
-            </Pressable>
-          </Animatable.View>
+          <View style={styles.header}>
+            <Image source={require('../../../assets/galhos.png')} style={styles.imgGalhos}/>
+          </View>
 
-          <View style={styles.containerTitulo}> 
+          <Animatable.View animation="rubberBand" style={styles.containerTitulo}> 
             <Text style={styles.text}>Bem-Vindo(a) de volta!</Text>
             <Text style={styles.text2}>Faça Login</Text>
-          </View>
+          </Animatable.View>
 
           <View style={styles.containerInput}> 
             <TextInput
@@ -49,7 +47,7 @@ export default function Login() {
 
           
         <Pressable onPress={ () => navigation.navigate('Home')}>
-            <Text style={styles.btnHome}>Entrar</Text>
+            <Animatable.Text animation="rubberBand" style={styles.btnHome}>Entrar</Animatable.Text>
         </Pressable>
         <StatusBar style="auto" />
       </View>

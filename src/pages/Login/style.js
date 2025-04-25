@@ -10,12 +10,16 @@ export default StyleSheet.create({
       position: 'relative',
     },
 
-    imgVoltar: {
-      width: 30,
-      height: 30,
-      right: 150,
-      bottom: 90,
-      
+    header: {
+      width: '100%',
+      height: 100,
+    },
+
+    imgGalhos: {
+      width: '100%',
+      height: 200,
+      position: 'absolute',
+      bottom: -10,
     },
 
     containerTitulo: {

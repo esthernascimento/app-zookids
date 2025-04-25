@@ -18,18 +18,20 @@ export default function Cadastro() {
     return (
           <View style={styles.container}>
 
-              <Animatable.View animation="fadeInLeft">
-                  <Pressable onPress={ () => navigation.navigate('BemVindo')}>
-                   <Image source={require('../../../assets/voltar.png')} style={styles.imgVoltar}/>
-                  </Pressable>
-              </Animatable.View>
+              <View style={styles.header}>
+                <Image source={require('../../../assets/galhos.png')} style={styles.imgGalhos}/>
+              </View>
 
-              <View style={styles.containerTitulo}> 
+              <Animatable.View animation="rubberBand" style={styles.containerTitulo}> 
                 <Text style={styles.text}>Bem-Vindo(a)!</Text>
                 <Text style={styles.text2}>Cadastre-se</Text>
-              </View>
+              </Animatable.View>
     
               <View style={styles.containerInput}> 
+                <Animatable.View animation="fadeInLeft" delay={1000} style={styles.containerImg}>
+                  <Image source={require('../../../assets/bicho-preguica.png')} style={styles.imgPreguica}/>
+                </Animatable.View>
+                
 
                   <TextInput
                     style={styles.input}
@@ -70,7 +72,7 @@ export default function Cadastro() {
     
               
             <Pressable onPress={ () => navigation.navigate('Home')}>
-                <Text style={styles.btnHome}>Cadastrar</Text>
+                <Animatable.Text animation="rubberBand" style={styles.btnHome}>Cadastrar</Animatable.Text>
             </Pressable>
             <StatusBar style="auto" />
           </View>
