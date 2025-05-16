@@ -4,6 +4,7 @@ import styles from './style';
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import * as Animatable from 'react-native-animatable';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 export default function Login() {
@@ -11,6 +12,23 @@ export default function Login() {
 
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
+
+  const recuperarDados = async () => {
+    try {
+      const usuarioSalvo = await AsyncStorage.getItem('dadosUsuario');
+
+      if (usuarioSalvo !== null) {
+        const dadosUsuario = JSON.parse(usuarioSalvo);
+        navigation.navigate('Home');
+        
+        alert(`Nome: ${dadosUsuario.nome}, E-mail: ${dadosUsuario.email}`);
+      } else {
+        alert('Nenhum dado encontrado');
+      }
+    } catch (e) {
+      alert('Erro ao recuperar os dados');
+    }
+  };
   
     return (
       <View style={styles.container}>
@@ -46,7 +64,7 @@ export default function Login() {
           </Animatable.View>
 
           
-        <Pressable onPress={ () => navigation.navigate('Home')}>
+        <Pressable onPress={recuperarDados}>
             <Animatable.Text animation="rubberBand" style={styles.btnHome}>Entrar</Animatable.Text>
         </Pressable>
         <StatusBar style="auto" />

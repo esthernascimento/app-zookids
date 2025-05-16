@@ -4,6 +4,7 @@ import styles from './style';
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import * as Animatable from 'react-native-animatable';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 export default function Cadastro() {
@@ -14,6 +15,35 @@ export default function Cadastro() {
   const [usuario, setUsuario] = useState('');
   const [senha, setSenha] = useState('');
   const [confirmarSenha, setConfirmarSenha] = useState('');
+
+  const salvarDados = async () => {
+
+      if (!nome || !email || !usuario || !senha || !confirmarSenha) {
+    alert('Por favor, preencha todos os campos.');
+    return;
+  }
+
+  if (senha !== confirmarSenha) {
+    alert('As senhas não coincidem.');
+    return;
+  }
+
+    const dadosUsuario = {
+      nome,
+      email,
+      usuario,
+      senha,
+    };
+
+      try {
+      await AsyncStorage.setItem('dadosUsuario', JSON.stringify(dadosUsuario))
+      alert('Dados salvos com sucesso!');
+      navigation.navigate('Login');
+    } catch (e) {
+      alert('Erro ao salvar os dados');
+    }
+  };
+
 
     return (
           <View style={styles.container}>
@@ -71,7 +101,7 @@ export default function Cadastro() {
               </View>
     
               
-            <Pressable onPress={ () => navigation.navigate('Home')}>
+            <Pressable onPress={salvarDados}>
                 <Animatable.Text animation="rubberBand" style={styles.btnHome}>Cadastrar</Animatable.Text>
             </Pressable>
             <StatusBar style="auto" />
