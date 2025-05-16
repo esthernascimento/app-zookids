@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text, View, Image, TextInput, Pressable } from 'react-native';
+import { Text, View, Image, TextInput, Pressable, Modal } from 'react-native';
 import styles from './style';
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import * as Animatable from 'react-native-animatable';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 
 export default function Login() {
@@ -13,15 +14,23 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
 
+  const [modal, setModal] = useState(false);
+  const [dadosUsuario, setDadosUsuario] = useState(null);
+
   const recuperarDados = async () => {
     try {
       const usuarioSalvo = await AsyncStorage.getItem('dadosUsuario');
 
       if (usuarioSalvo !== null) {
         const dadosUsuario = JSON.parse(usuarioSalvo);
-        navigation.navigate('Home');
+
+        const showModal = () => {
+          setModal(true);
+
+           navigation.navigate('Home');
+        };
+
         
-        alert(`Nome: ${dadosUsuario.nome}, E-mail: ${dadosUsuario.email}`);
       } else {
         alert('Nenhum dado encontrado');
       }
@@ -68,6 +77,12 @@ export default function Login() {
             <Animatable.Text animation="rubberBand" style={styles.btnHome}>Entrar</Animatable.Text>
         </Pressable>
         <StatusBar style="auto" />
+
+        <Modal visible={modal} animationType='fade'>
+            <View style={styles.modal}>
+              <Text>(Nome: ${dadosUsuario.nome}, E-mail: ${dadosUsuario.email})</Text>
+            </View>
+        </Modal>
       </View>
     );
   }
