@@ -8,6 +8,7 @@ export default StyleSheet.create({
       justifyContent: 'center',
       gap: 100,
       flexDirection: 'column',
+      gap: 10,
     },
 
     img: {
@@ -17,8 +18,8 @@ export default StyleSheet.create({
     },
 
     carregando: {
-      width: 160,
-      height: 20,
+      width: 150,
+      height: 50,
     },
 
   });
