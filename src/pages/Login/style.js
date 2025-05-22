@@ -90,5 +90,24 @@ export default StyleSheet.create({
       borderRadius: 10,
       textTransform: 'uppercase', 
       marginTop: 100, 
-    }
+    },
+
+    modal: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Cor de fundo com opacidade
+  },
+  modalContainer: {
+    backgroundColor: 'white',
+    padding: 20,
+    borderRadius: 10,
+    width: '80%',
+    alignItems: 'center',
+  },
+  modalText: {
+    fontSize: 18,
+    marginBottom: 20,
+    textAlign: 'center',
+  }
   });

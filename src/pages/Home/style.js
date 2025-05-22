@@ -19,12 +19,26 @@ export default StyleSheet.create({
       
     },
 
-    imgVoltar: {
-      width: 30,
-      height: 30,
-      right: 150,
-      bottom: 10, 
+    header: {
+      display: 'flex',
+      flexDirection: 'row',
+      position: 'absolute',
+      alignItems: 'left',
+      justifyContent: 'space-between',
+      padding: 10,
+      width: '100%',
+      top: 10,
     },
+
+  sair: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: '#FF0000',
+    backgroundColor: '#FFF',
+    padding: 8,
+    borderRadius: 10,
+    textTransform: 'uppercase',
+  },
 
     containerTitulo: {
       alignItems: 'center',
@@ -89,4 +103,6 @@ export default StyleSheet.create({
       alignSelf: 'flex-start',
  
     },
+
+
   });

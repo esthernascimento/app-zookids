@@ -5,6 +5,7 @@ import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import * as Animatable from "react-native-animatable";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Button } from "react-native-web";
 
 export default function Login() {
   const navigation = useNavigation();
@@ -14,24 +15,28 @@ export default function Login() {
 
   const [modal, setModal] = useState(false);
   const [dadosUsuario, setDadosUsuario] = useState(null);
+  const [modalMessage, setModalMessage] = useState("");
+
 
   const recuperarDados = async () => {
     try {
       const usuarioSalvo = await AsyncStorage.getItem("dadosUsuario");
+      const dados = usuarioSalvo ? JSON.parse(usuarioSalvo) : null;
 
-      if (usuarioSalvo !== null) {
-        const dadosUsuario = JSON.parse(usuarioSalvo);
+      if (dados && dados.email === email && dados.senha === senha) {
+        await AsyncStorage.setItem("recuperarDados", JSON.stringify({email, senha}));
 
-        const showModal = () => {
-          setModal(true);
+        setModalMessage('Login realizado com sucesso!');
+        setModal(true);
+        navigation.navigate("Home");
 
-          navigation.navigate("Home");
-        };
       } else {
-        alert("Nenhum dado encontrado");
+        setModalMessage('Credenciais inválidas');
+        setModal(true);
       }
     } catch (e) {
-      alert("Erro ao recuperar os dados");
+      setModalMessage('Erro ao realizar login');
+      setModal(true);
     }
   };
 
@@ -76,7 +81,7 @@ export default function Login() {
       <Pressable
         onPress={() => {
            recuperarDados();
-           showModal();
+           
         }}
       >
         <Animatable.Text animation="rubberBand" style={styles.btnHome}>
@@ -84,11 +89,18 @@ export default function Login() {
         </Animatable.Text>
       </Pressable>
 
-      <Modal visible={modal} animationType="fade">
+      <Modal visible={modal} 
+        animationType="fade"
+        transparent={true}
+        onRequestClose={() => setModal(false)}
+
+      >
         <View style={styles.modal}>
-          <Text>
-            (Nome: ${setDadosUsuario.nome}, E-mail: ${setDadosUsuario.email})
-          </Text>
+          <View style={styles.modalContainer}>
+              <Text style={styles.modalText}>{modalMessage}</Text>
+              <Button title="Fechar" onPress={() => setModal(false)} />
+          </View>
+          
         </View>
       </Modal>
     </View>

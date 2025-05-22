@@ -90,7 +90,7 @@ export default StyleSheet.create({
   },
 
   imagemSelecionado: {
-    width: 200,
+    width: 240,
     height: 200,
     marginBottom: 20,
   },

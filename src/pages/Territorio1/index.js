@@ -28,6 +28,7 @@ export default function Territorio1() {
           id: 1,
           nome: 'Onça Pintada',
           imagem: require('../../../assets/onca-pintada.png'),
+          imagemReal: require('../../../assets/oncaPintada-real.png'),
           descricao: 'A onça-pintada é um grande felino encontrado na América do Sul e Central. É conhecida por sua pelagem amarelada com manchas escuras, que a ajuda a se camuflar na floresta. A onça-pintada é um predador solitário e é considerada uma espécie vulnerável devido à perda de habitat e caça.'
         },
 
@@ -35,6 +36,7 @@ export default function Territorio1() {
             id: 2,
             nome: 'Onça Parda',
             imagem: require('../../../assets/onca-parda.png'),
+            imagemReal: require('../../../assets/oncaParda-real.png'),
             descricao: 'A onça-parda, também conhecida como puma ou leão-da-montanha, é um grande felino encontrado nas Américas. É um predador ágil e adaptável, capaz de viver em uma variedade de habitats, desde florestas até montanhas. A onça-parda é conhecida por sua pelagem uniforme e seu comportamento solitário.'
         },
 
@@ -111,7 +113,7 @@ export default function Territorio1() {
             <Modal visible={modal} animationType='fade'>
                 <View style={styles.modal}>
                      <ImageBackground
-                         source={require('../../../assets/bg-safari.jpg')}
+                         source={require('../../../assets/fundo-realista.png')}
                          opacity={0.4}
                         style={styles.background}
                         resizeMode='stretch'>
@@ -119,7 +121,7 @@ export default function Territorio1() {
                     <>
                  
                     <Text style={styles.nomeSelecionado}>{animalSelecionado.nome}</Text>
-                    <Image source={animalSelecionado.imagem} style={styles.imagemSelecionado} />
+                    <Image source={animalSelecionado.imagemReal} style={styles.imagemSelecionado} />
                     <Text style={styles.descSelecionado}>{animalSelecionado.descricao}</Text>
                     <Pressable onPress={voltar}>
                         <Text style={styles.voltar}>Voltar</Text>
