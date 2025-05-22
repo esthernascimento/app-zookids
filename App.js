@@ -20,7 +20,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Cadastro"
+        initialRouteName="Splash"
         screenOptions={{
           headerShown: false,
         }}>

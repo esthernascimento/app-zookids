@@ -62,6 +62,7 @@ export default StyleSheet.create({
     input: {
       borderColor: '#fff',
       backgroundColor: '#fff',
+      textTransform: 'uppercase',
       borderRadius: 20,
       fontWeight: 'bold',
       borderWidth: 1,
