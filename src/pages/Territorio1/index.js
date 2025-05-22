@@ -114,7 +114,7 @@ export default function Territorio1() {
                 <View style={styles.modal}>
                      <ImageBackground
                          source={require('../../../assets/fundo-realista.png')}
-                         opacity={0.4}
+                         opacity={0.2}
                         style={styles.background}
                         resizeMode='stretch'>
                     {animalSelecionado ? (

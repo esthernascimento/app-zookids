@@ -72,7 +72,6 @@ export default StyleSheet.create({
   background: {
     width: '100%',
     height: 844,
-    backgroundColor: '#fff',
     alignItems: 'center',
     padding: 20,
     gap: 20,
@@ -81,11 +80,12 @@ export default StyleSheet.create({
 
   nomeSelecionado: {
     fontSize: 30,
-    backgroundColor: '#6B8E23',
     borderRadius: 10,
     padding: 10,
     fontWeight: 'bold',
-    color: '#fff',
+    color: '#000',
+    backgroundColor: '#fff',
+    opacity: 0.8,
     marginBottom: 10,
   },
 
@@ -97,8 +97,9 @@ export default StyleSheet.create({
 
   descSelecionado: {
     fontSize: 18,
-    color: '#A0522D',
-    backgroundColor: '#FFDEAD',
+    color: '#000',
+    backgroundColor: '#fff',
+    opacity: 0.8,
     maxWidth: 300,
     fontWeight: 'bold',
     textAlign: 'justify',
