@@ -20,7 +20,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Territorio1"
+        initialRouteName="Territorio2"
         screenOptions={{
           headerShown: false,
         }}>

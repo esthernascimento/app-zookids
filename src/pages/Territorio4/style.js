@@ -12,20 +12,65 @@ export default StyleSheet.create({
   },
 
   header: {
-    display: 'flex',
-    flexDirection: 'row',
-    position: 'absolute',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    display: "flex",
+    flexDirection: "column",
+    position: "absolute",
+    alignItems: "center",
     padding: 10,
-    width: '100%',
+    width: "100%",
     top: 10,
   },
 
-  imgVoltar: {
+  menuIcon: {
     width: 30,
     height: 30,
+    left: 150,
   },
+
+  menuOverlay: {
+    flex: 1,
+    backgroundColor: "rgba(0,0,0,0.5)",
+    justifyContent: "flex-start",
+    paddingTop: 50,
+    paddingLeft: 100,
+  },
+
+  menuContainer: {
+    backgroundColor: "white",
+    borderRadius: 12,
+    paddingVertical: 20,
+    paddingHorizontal: 25,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+
+  menuOption: {
+    fontSize: 18,
+    marginBottom: 15,
+    color: "#333",
+    fontWeight: "500",
+  },
+
+  menuOptionLogout: {
+    fontSize: 18,
+    marginBottom: 10,
+    color: "#E63946",
+    fontWeight: "600",
+  },
+
+  menuOptionPressable: {
+    paddingVertical: 8,
+    paddingHorizontal: 10,
+    borderRadius: 8,
+  },
+
+  menuOptionPressableHover: {
+    backgroundColor: "#f0f0f0",
+  },
+
 
   titulo: {
     fontSize: 20,
@@ -35,8 +80,6 @@ export default StyleSheet.create({
     padding: 10,
     borderRadius: 10,
     textTransform: 'uppercase',
-    position: 'absolute',
-    left: 120
   },
 
   flatlist: {
@@ -66,13 +109,13 @@ export default StyleSheet.create({
   },
 
   imagem: {
-    width: 80,
-    height: 80,
+    width: 70,
+    height: 70,
   },
 
   background: {
-    flex: 1,
-    backgroundColor: '#fff',
+    width: '100%',
+    height: 844,
     alignItems: 'center',
     padding: 20,
     gap: 20,
@@ -80,52 +123,42 @@ export default StyleSheet.create({
   },
 
   nomeSelecionado: {
-    fontSize: 30,
-    backgroundColor: '#6B8E23',
-    borderRadius: 10,
-    padding: 10,
+    fontSize: 28,
+    borderRadius: 20,
+    padding: 8,
     fontWeight: 'bold',
-    color: '#fff',
-    marginBottom: 10,
+    color: '#d17507',
+    backgroundColor: '#fbe474',
+    width: 250,
+    textAlign: 'center',
   },
 
   imagemSelecionado: {
-    width: 200,
+    width: 240,
     height: 200,
-    marginBottom: 20,
+    borderRadius: 20,
+    borderWidth: 3,
+    borderColor: '#fbe474',
   },
 
   descSelecionado: {
-    fontSize: 22,
-    color: '#fff',
+    fontSize: 18,
+    color: '#000',
+    opacity: 0.8,
+    maxWidth: 300,
     fontWeight: 'bold',
     textAlign: 'justify',
     marginBottom: 20,
-    backgroundColor: '#6B8E23',
     borderRadius: 10,
     padding: 10,
-  },
-
-  btnVoltar: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#A0522D',
-    backgroundColor: '#FFDEAD',
-    padding: 10,
-    borderRadius: 10,
-    textTransform: 'uppercase',
+    maxHeight: 250,
   },
 
   voltar: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#A0522D',
-    backgroundColor: '#FFDEAD',
-    padding: 10,
-    borderRadius: 10,
-    textTransform: 'uppercase',
-    position: 'absolute',
-    top: 760,
-    alignSelf: 'center',
+    width: 30,
+    height: 30,
+    position: "absolute",
+    top: -100,
+    right: 150,
   },
 });

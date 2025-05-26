@@ -1,5 +1,5 @@
-import { StatusBar } from "expo-status-bar";
-import { Image, Pressable, Text, View } from "react-native";
+import { useState } from "react";
+import { Image, Pressable, Text, View, Modal } from "react-native";
 import styles from "./style";
 import { useNavigation } from "@react-navigation/native";
 import { FlatList } from "react-native-web";
@@ -10,15 +10,17 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 export default function Home() {
   const navigation = useNavigation();
 
-  const Logout = async () => {
+  const [menuVisible, setMenuVisible] = useState(false);
+
+  const sair = async () => {
     try {
-        await AsyncStorage.clear();
-        console.log('Dados limpos com sucesso!');
-        navigation.navigate("Splash")
+      await AsyncStorage.clear();
+      console.log("Dados limpos com sucesso!");
+      navigation.navigate("Splash");
     } catch (error) {
-        console.error('Erro ao limpar os dados:', error);
+      console.error("Erro ao limpar os dados:", error);
     }
-};
+  };
 
   const territorios = [
     {
@@ -114,8 +116,11 @@ export default function Home() {
         resizeMode="cover"
       >
         <Animatable.View animation="fadeInLeft" style={styles.header}>
-          <Pressable onPress={Logout}>
-            <Text style={styles.sair}>Sair</Text>
+          <Pressable onPress={() => setMenuVisible(true)}>
+            <Image
+              source={require("../../../assets/menu.png")}
+              style={styles.menuIcon}
+            />
           </Pressable>
         </Animatable.View>
 
@@ -158,6 +163,41 @@ export default function Home() {
           numColumns={2}
         />
       </ImageBackground>
+
+      <Modal visible={menuVisible} transparent={true} animationType="fade">
+              <Pressable
+                style={styles.menuOverlay}
+                onPress={() => setMenuVisible(false)}
+              >
+                <Pressable style={styles.menuContainer}>
+                  <Pressable
+                    style={({ pressed }) => [
+                      styles.menuOptionPressable,
+                      pressed && styles.menuOptionPressableHover,
+                    ]}
+                    onPress={() => {
+                      setMenuVisible(false);
+                      navigation.navigate("Home");
+                    }}
+                  >
+                    <Text style={styles.menuOption}>Home</Text>
+                  </Pressable>
+      
+                  <Pressable
+                    style={({ pressed }) => [
+                      styles.menuOptionPressable,
+                      pressed && styles.menuOptionPressableHover,
+                    ]}
+                    onPress={() => {
+                      setMenuVisible(false);
+                      sair();
+                    }}
+                  >
+                    <Text style={styles.menuOptionLogout}>Sair</Text>
+                  </Pressable>
+                </Pressable>
+              </Pressable>
+            </Modal>
     </View>
   );
 }

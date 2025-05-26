@@ -19,26 +19,66 @@ export default StyleSheet.create({
       
     },
 
-    header: {
-      display: 'flex',
-      flexDirection: 'row',
-      position: 'absolute',
-      alignItems: 'left',
-      justifyContent: 'space-between',
-      padding: 10,
-      width: '100%',
-      top: 10,
-    },
-
-  sair: {
-    fontSize: 14,
-    fontWeight: 'bold',
-    color: '#FF0000',
-    backgroundColor: '#FFF',
-    padding: 8,
-    borderRadius: 10,
-    textTransform: 'uppercase',
+  header: {
+    display: 'flex',
+    flexDirection: 'column',
+    position: 'absolute',
+    alignItems: 'center',
+    padding: 10,
+    width: '100%',
+    top: 10,
   },
+
+menuIcon: {
+  width: 30,
+  height: 30,
+  left: 150,
+},
+
+menuOverlay: {
+  flex: 1,
+  backgroundColor: 'rgba(0,0,0,0.5)',
+  justifyContent: 'flex-start',
+  paddingTop: 50,
+  paddingLeft: 100,
+},
+
+menuContainer: {
+  backgroundColor: 'white',
+  borderRadius: 12,
+  paddingVertical: 20,
+  paddingHorizontal: 25,
+  shadowColor: '#000',
+  shadowOffset: { width: 0, height: 4 },
+  shadowOpacity: 0.25,
+  shadowRadius: 4,
+  elevation: 5,
+},
+
+menuOption: {
+  fontSize: 18,
+  marginBottom: 15,
+  color: '#333',
+  fontWeight: '500',
+},
+
+menuOptionLogout: {
+  fontSize: 18,
+  marginBottom: 10,
+  color: '#E63946',
+  fontWeight: '600',
+},
+
+menuOptionPressable: {
+  paddingVertical: 8,
+  paddingHorizontal: 10,
+  borderRadius: 8,
+},
+
+menuOptionPressableHover: {
+  backgroundColor: '#f0f0f0',
+},
+
 
     containerTitulo: {
       alignItems: 'center',

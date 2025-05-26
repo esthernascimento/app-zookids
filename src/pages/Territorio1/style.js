@@ -13,19 +13,64 @@ export default StyleSheet.create({
 
   header: {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     position: 'absolute',
     alignItems: 'center',
-    justifyContent: 'space-between',
     padding: 10,
     width: '100%',
     top: 10,
   },
 
-  imgVoltar: {
-    width: 30,
-    height: 30,
-  },
+menuIcon: {
+  width: 30,
+  height: 30,
+  left: 210,
+},
+
+menuOverlay: {
+  flex: 1,
+  backgroundColor: 'rgba(0,0,0,0.5)',
+  justifyContent: 'flex-start',
+  paddingTop: 50,
+  paddingLeft: 100,
+},
+
+menuContainer: {
+  backgroundColor: 'white',
+  borderRadius: 12,
+  paddingVertical: 20,
+  paddingHorizontal: 25,
+  shadowColor: '#000',
+  shadowOffset: { width: 0, height: 4 },
+  shadowOpacity: 0.25,
+  shadowRadius: 4,
+  elevation: 5,
+},
+
+menuOption: {
+  fontSize: 18,
+  marginBottom: 15,
+  color: '#333',
+  fontWeight: '500',
+},
+
+menuOptionLogout: {
+  fontSize: 18,
+  marginBottom: 10,
+  color: '#E63946',
+  fontWeight: '600',
+},
+
+menuOptionPressable: {
+  paddingVertical: 8,
+  paddingHorizontal: 10,
+  borderRadius: 8,
+},
+
+menuOptionPressableHover: {
+  backgroundColor: '#f0f0f0',
+},
+
 
   titulo: {
     fontSize: 20,
@@ -35,8 +80,7 @@ export default StyleSheet.create({
     padding: 10,
     borderRadius: 10,
     textTransform: 'uppercase',
-    position: 'absolute',
-    left: 120
+
   },
 
   flatlist: {
@@ -108,19 +152,14 @@ export default StyleSheet.create({
     marginBottom: 20,
     borderRadius: 10,
     padding: 10,
+    maxHeight: 250,
   },
 
   voltar: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#A0522D',
-    backgroundColor: '#FFDEAD',
-    padding: 10,
-    borderRadius: 10,
-    textTransform: 'uppercase',
-    position: 'absolute',
-    alignSelf: 'right',
-    left: 70,
-    top: -90,
+    width: 30,
+    height: 30,
+    position: "absolute",
+    top: -100,
+    right: 150,
   },
 });
