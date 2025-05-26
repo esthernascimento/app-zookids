@@ -80,25 +80,27 @@ export default StyleSheet.create({
 
   nomeSelecionado: {
     fontSize: 30,
-    borderRadius: 10,
-    padding: 10,
+    borderRadius: 20,
+    padding: 8,
     fontWeight: 'bold',
-    color: '#000',
-    backgroundColor: '#fff',
-    opacity: 0.8,
+    color: '#d17507',
+    backgroundColor: '#fbe474',
     marginBottom: 10,
+    width: 250,
+    textAlign: 'center',
   },
 
   imagemSelecionado: {
     width: 240,
     height: 200,
-    marginBottom: 20,
+    borderRadius: 20,
+    borderWidth: 3,
+    borderColor: '#fbe474',
   },
 
   descSelecionado: {
     fontSize: 18,
     color: '#000',
-    backgroundColor: '#fff',
     opacity: 0.8,
     maxWidth: 300,
     fontWeight: 'bold',
@@ -106,16 +108,6 @@ export default StyleSheet.create({
     marginBottom: 20,
     borderRadius: 10,
     padding: 10,
-  },
-
-  btnVoltar: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#A0522D',
-    backgroundColor: '#FFDEAD',
-    padding: 10,
-    borderRadius: 10,
-    textTransform: 'uppercase',
   },
 
   voltar: {
@@ -127,6 +119,8 @@ export default StyleSheet.create({
     borderRadius: 10,
     textTransform: 'uppercase',
     position: 'absolute',
-    alignSelf: 'center',
+    alignSelf: 'right',
+    left: 70,
+    top: -90,
   },
 });
