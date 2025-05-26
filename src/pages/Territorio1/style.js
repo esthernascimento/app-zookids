@@ -113,7 +113,8 @@ menuOptionPressableHover: {
     height: 90,
   },
 
-  background: {
+  modal: {
+    backgroundColor: '#4682B4',
     width: '100%',
     height: 844,
     alignItems: 'center',
@@ -123,15 +124,16 @@ menuOptionPressableHover: {
   },
 
   nomeSelecionado: {
-    fontSize: 30,
-    borderRadius: 20,
+    fontSize: 28,
+    borderRadius: 10,
     padding: 8,
     fontWeight: 'bold',
-    color: '#d17507',
-    backgroundColor: '#fbe474',
+    color: '#fff',
+    backgroundColor: '#B0C4DE',
     marginBottom: 10,
     width: 250,
     textAlign: 'center',
+    textTransform: 'uppercase',
   },
 
   imagemSelecionado: {
@@ -139,12 +141,12 @@ menuOptionPressableHover: {
     height: 200,
     borderRadius: 20,
     borderWidth: 3,
-    borderColor: '#fbe474',
+    borderColor: '#B0C4DE',
   },
 
   descSelecionado: {
     fontSize: 18,
-    color: '#000',
+    color: '#fff',
     opacity: 0.8,
     maxWidth: 300,
     fontWeight: 'bold',
