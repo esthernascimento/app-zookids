@@ -136,7 +136,7 @@ export default function Territorio1() {
         />
       </Animatable.View>
 
-      {/* Modal de informações do animal */}
+  
       <Modal visible={modal} animationType="fade">
         <View style={styles.modal}>
           

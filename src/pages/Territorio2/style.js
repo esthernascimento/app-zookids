@@ -79,8 +79,6 @@ export default StyleSheet.create({
     padding: 10,
     borderRadius: 10,
     textTransform: "uppercase",
-    position: "absolute",
-    left: 120,
   },
 
   flatlist: {
@@ -114,7 +112,8 @@ export default StyleSheet.create({
     height: 70,
   },
 
-  background: {
+modal: {
+    backgroundColor: '#ee6f43',
     width: '100%',
     height: 844,
     alignItems: 'center',
@@ -128,8 +127,8 @@ export default StyleSheet.create({
     borderRadius: 20,
     padding: 8,
     fontWeight: 'bold',
-    color: '#d17507',
-    backgroundColor: '#fbe474',
+    color: '#fff',
+    backgroundColor: '#f29471',
     width: 250,
     textAlign: 'center',
   },
@@ -139,12 +138,13 @@ export default StyleSheet.create({
     height: 200,
     borderRadius: 20,
     borderWidth: 3,
-    borderColor: '#fbe474',
+    borderColor: '#f29471',
+    
   },
 
   descSelecionado: {
     fontSize: 18,
-    color: '#000',
+    color: '#fff',
     opacity: 0.8,
     maxWidth: 300,
     fontWeight: 'bold',
