@@ -39,6 +39,7 @@ export default function Territorio3() {
       id: 1,
       nome: "Mamíferos do Cerrado",
       imagem: require("../../../assets/mamiferos-do-cerrado.png"),
+      imagemReal: require("../../../assets/mamiferos-cerrado-real.png"),
       descricao:
         "A diversidade de mamíferos do Cerrado inclui espécies como o lobo-guará, a anta e o tamanduá-bandeira. Esses mamíferos desempenham papéis importantes na polinização, dispersão de sementes e controle de populações de insetos.",
     },
@@ -47,6 +48,7 @@ export default function Territorio3() {
       id: 2,
       nome: "Urso-de-óculos",
       imagem: require("../../../assets/urso-de-oculos.png"),
+      imagemReal: require("../../../assets/urso-de-oculos-real.png"),
       descricao:
         "O urso-de-óculos, também conhecido como urso-andino, é uma espécie ameaçada encontrada nas montanhas da América do Sul. Ele é conhecido por seu rosto distintivo e hábitos alimentares variados, incluindo frutas e folhas. O urso-de-óculos desempenha um papel importante na dispersão de sementes.",
     },
@@ -55,6 +57,7 @@ export default function Territorio3() {
       id: 3,
       nome: "Dinossauros",
       imagem: require("../../../assets/dinossauro.png"),
+      imagemReal: require("../../../assets/dinossauros-real.png"),
       descricao:
         "Os dinossauros foram um grupo diversificado de répteis que dominaram a Terra durante a Era Mesozoica. Eles variavam em tamanho e forma, desde pequenos dinossauros bípedes até enormes herbívoros.",
     },
@@ -90,12 +93,7 @@ export default function Territorio3() {
 
       <Modal visible={modal} animationType="fade" style={styles.modal}>
         <View style={styles.modal}>
-          <ImageBackground
-            source={require("../../../assets/bg-safari.jpg")}
-            opacity={0.2}
-            style={styles.background}
-            resizeMode="stretch"
-          >
+
             {animalSelecionado ? (
               <>
                 <Pressable onPress={() => voltar()}>
@@ -108,7 +106,7 @@ export default function Territorio3() {
                   {animalSelecionado.nome}
                 </Text>
                 <Image
-                  source={animalSelecionado.imagem}
+                  source={animalSelecionado.imagemReal}
                   style={styles.imagemSelecionado}
                 />
                 <Text style={styles.descSelecionado}>
@@ -116,7 +114,7 @@ export default function Territorio3() {
                 </Text>
               </>
             ) : null}
-          </ImageBackground>
+      
         </View>
       </Modal>
 
