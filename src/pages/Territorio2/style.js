@@ -131,6 +131,7 @@ export default StyleSheet.create({
     backgroundColor: '#f29471',
     width: 250,
     textAlign: 'center',
+    textTransform: 'uppercase',
   },
 
   imagemSelecionado: {
