@@ -111,15 +111,16 @@ export default function Territorio1() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Animatable.View animation="fadeInLeft" delay={500}>
+        <Animatable.View animation="fadeInRight" delay={1000}>
           <Pressable onPress={() => setMenuVisible(true)}>
             <Image
               source={require("../../../assets/menu.png")} // Ícone do menu hamburguer
               style={styles.menuIcon}
             />
           </Pressable>
-          <Text style={styles.titulo}>Território 1</Text>
         </Animatable.View>
+
+        <Animatable.Text animation="rubberBand" style={styles.titulo}>Território 1</Animatable.Text>
       </View>
 
       <Animatable.View animation="fadeIn" style={styles.flatlist}>
@@ -143,14 +144,14 @@ export default function Territorio1() {
             {animalSelecionado && (
               <>
                 <Pressable onPress={() => voltar()}>
-                  <Image
+                  <Animatable.Image animation="fadeInLeft" delay={500}
                     source={require("../../../assets/seta-voltar.png")}
                     style={styles.voltar}
                   />
                 </Pressable>
-                <Text style={styles.nomeSelecionado}>
+                <Animatable.Text animation="rubberBand" style={styles.nomeSelecionado}>
                   {animalSelecionado.nome}
-                </Text>
+                </Animatable.Text>
                 <Image
                   source={animalSelecionado.imagemReal}
                   style={styles.imagemSelecionado}

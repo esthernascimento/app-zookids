@@ -24,7 +24,7 @@ export default StyleSheet.create({
 menuIcon: {
   width: 30,
   height: 30,
-  left: 210,
+  left: 150,
 },
 
 menuOverlay: {

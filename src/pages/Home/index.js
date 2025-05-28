@@ -115,7 +115,7 @@ export default function Home() {
         style={styles.background}
         resizeMode="cover"
       >
-        <Animatable.View animation="fadeInLeft" style={styles.header}>
+        <Animatable.View animation="fadeInRight" style={styles.header}>
           <Pressable onPress={() => setMenuVisible(true)}>
             <Image
               source={require("../../../assets/menu.png")}
