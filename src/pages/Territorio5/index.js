@@ -115,12 +115,7 @@ export default function Territorio5() {
 
       <Modal visible={modal} animationType="fade" style={styles.modal}>
         <View style={styles.modal}>
-          <ImageBackground
-            source={require("../../../assets/bg-safari.jpg")}
-            opacity={0.2}
-            style={styles.background}
-            resizeMode="stretch"
-          >
+
             {animalSelecionado ? (
               <>
                 <Pressable onPress={() => voltar()}>
@@ -141,7 +136,7 @@ export default function Territorio5() {
                 </Text>
               </>
             ) : null}
-          </ImageBackground>
+          
         </View>
       </Modal>
 

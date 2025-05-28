@@ -39,6 +39,8 @@ export default function Territorio4() {
       id: 1,
       nome: "Rinoceronte",
       imagem: require("../../../assets/rinoceronte.png"),
+      imagemReal: require("../../../assets/rinoceronte-real.png"),
+      
       descricao:
         "O rinoceronte é um grande mamífero herbívoro encontrado na África e na Ásia. Eles são conhecidos por sua pele grossa e chifres, que são feitos de queratina. Os rinocerontes desempenham um papel importante nos ecossistemas, ajudando a manter a vegetação sob controle.",
     },
@@ -47,6 +49,7 @@ export default function Territorio4() {
       id: 2,
       nome: "Zebra",
       imagem: require("../../../assets/zebra.png"),
+      imagemReal: require("../../../assets/zebra-real.png"),
       descricao:
         "As zebras são mamíferos herbívoros conhecidos por suas listras pretas e brancas. Elas vivem em manadas e são encontradas principalmente na África. As zebras desempenham um papel importante na manutenção da vegetação e na dispersão de sementes.",
     },
@@ -55,6 +58,7 @@ export default function Territorio4() {
       id: 3,
       nome: "Girafa",
       imagem: require("../../../assets/girafa.png"),
+      imagemReal: require("../../../assets/girafa-real.png"),
       descricao:
         "As girafas são os animais terrestres mais altos, conhecidas por seus longos pescoços e pernas. Elas se alimentam principalmente de folhas de árvores altas e desempenham um papel importante na polinização e dispersão de sementes.",
     },
@@ -63,6 +67,7 @@ export default function Territorio4() {
       id: 4,
       nome: "Suricato",
       imagem: require("../../../assets/suricato.png"),
+      imagemReal: require("../../../assets/suricato-real.png"),
       descricao:
         "Os suricatos são pequenos mamíferos sociais encontrados na África. Eles vivem em grupos e são conhecidos por seu comportamento cooperativo, como cuidar dos filhotes e vigiar predadores. Os suricatos desempenham um papel importante no controle de insetos e na manutenção do equilíbrio ecológico.",
     },
@@ -71,6 +76,7 @@ export default function Territorio4() {
       id: 5,
       nome: "Dromedário",
       imagem: require("../../../assets/dromedario.png"),
+      imagemReal: require("../../../assets/dromedario-real.png"),
       descricao:
         "O dromedário, também conhecido como camelo de um corcunda, é um mamífero herbívoro adaptado a ambientes áridos. Eles são conhecidos por sua capacidade de armazenar água e sobreviver em desertos. Os dromedários desempenham um papel importante no transporte de pessoas e mercadorias em regiões desérticas.",
     },
@@ -79,6 +85,7 @@ export default function Territorio4() {
       id: 6,
       nome: "Leão",
       imagem: require("../../../assets/leao.png"),
+      imagemReal: require("../../../assets/leao-real.png"),
       descricao:
         "Os leões são grandes felinos encontrados na África e na Ásia. Eles são conhecidos por sua força e comportamento social, vivendo em grupos chamados de alcateias. Os leões desempenham um papel importante como predadores no ecossistema, ajudando a controlar populações de herbívoros.",
     },
@@ -87,6 +94,7 @@ export default function Territorio4() {
       id: 7,
       nome: "Tigre",
       imagem: require("../../../assets/tigre.png"),
+      imagemReal: require("../../../assets/tigre-real.png"),
       descricao:
         "Tigres são grandes felinos encontrados na Ásia, conhecidos por suas listras distintas e força. Eles são predadores de topo e desempenham um papel crucial no controle de populações de presas. Os tigres são ameaçados devido à perda de habitat e caça ilegal.",
     },
@@ -95,6 +103,7 @@ export default function Territorio4() {
       id: 8,
       nome: "Hipopótamo",
       imagem: require("../../../assets/hipopotamo.png"),
+      imagemReal: require("../../../assets/hipopotamo-real.png"),
       descricao:
         "O hipopótamo é um grande mamífero semi-aquático encontrado na África. Eles são conhecidos por sua pele grossa e comportamento territorial. Os hipopótamos desempenham um papel importante na manutenção de ecossistemas aquáticos, ajudando a controlar a vegetação e a qualidade da água.",
     },
@@ -106,7 +115,7 @@ export default function Territorio4() {
         <Animatable.View animation="fadeInLeft" delay={1000}>
           <Pressable onPress={() => setMenuVisible(true)}>
             <Image
-              source={require("../../../assets/menu.png")} // Ícone do menu hamburguer
+              source={require("../../../assets/menu.png")}
               style={styles.menuIcon}
             />
           </Pressable>
@@ -131,12 +140,7 @@ export default function Territorio4() {
 
       <Modal visible={modal} animationType="fade" style={styles.modal}>
         <View style={styles.modal}>
-          <ImageBackground
-            source={require("../../../assets/bg-safari.jpg")}
-            opacity={0.2}
-            style={styles.background}
-            resizeMode="stretch"
-          >
+
             {animalSelecionado ? (
               <>
                 <Pressable onPress={() => voltar()}>
@@ -149,7 +153,7 @@ export default function Territorio4() {
                   {animalSelecionado.nome}
                 </Text>
                 <Image
-                  source={animalSelecionado.imagem}
+                  source={animalSelecionado.imagemReal}
                   style={styles.imagemSelecionado}
                 />
                 <Text style={styles.descSelecionado}>
@@ -157,7 +161,7 @@ export default function Territorio4() {
                 </Text>
               </>
             ) : null}
-          </ImageBackground>
+        
         </View>
       </Modal>
 

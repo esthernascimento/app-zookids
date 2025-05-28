@@ -111,7 +111,8 @@ export default StyleSheet.create({
     height: 80,
   },
 
-   background: {
+  modal: {
+    backgroundColor: '#75548f',
     width: '100%',
     height: 844,
     alignItems: 'center',
