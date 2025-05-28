@@ -112,7 +112,7 @@ export default StyleSheet.create({
   },
 
   modal: {
-    backgroundColor: '#75548f',
+    backgroundColor: '#7d4f2e',
     width: '100%',
     height: 844,
     alignItems: 'center',
@@ -126,10 +126,11 @@ export default StyleSheet.create({
     borderRadius: 20,
     padding: 8,
     fontWeight: 'bold',
-    color: '#d17507',
-    backgroundColor: '#fbe474',
+    color: '#fff',
+    backgroundColor: '#9c745c',
     width: 250,
     textAlign: 'center',
+    textTransform: 'uppercase',
   },
 
   imagemSelecionado: {
@@ -137,12 +138,12 @@ export default StyleSheet.create({
     height: 200,
     borderRadius: 20,
     borderWidth: 3,
-    borderColor: '#fbe474',
+    borderColor: '#9c745c',
   },
 
   descSelecionado: {
     fontSize: 18,
-    color: '#000',
+    color: '#fff',
     opacity: 0.8,
     maxWidth: 300,
     fontWeight: 'bold',
