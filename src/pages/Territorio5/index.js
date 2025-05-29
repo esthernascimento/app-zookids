@@ -56,7 +56,7 @@ export default function Territorio5() {
     {
       id: 3,
       nome: "Gavião",
-      imagem: require("../../../assets/gaviao.jpg"),
+      imagem: require("../../../assets/gaviao.png"),
       imagemReal: require("../../../assets/gaviao-real.png"),
       descricao:
         "Os gaviões são aves de rapina conhecidas por sua agilidade e habilidades de caça. Eles são encontrados em uma variedade de habitats e desempenham um papel importante no controle de populações de presas. Os gaviões são frequentemente usados em falcoaria e são admirados por sua beleza e força.",
