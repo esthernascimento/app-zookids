@@ -83,8 +83,8 @@ Crianças de 3 a 8 anos que estejam aprendendo sobre os animais.
 ## 👩‍💻 Desenvolvido por
 
 **Gisele Nunes e Esther Nascimento**  
-[LinkedIn](https://www.linkedin.com/in/gisele-nuness)
-[LinkedIn](https://www.linkedin.com/in/esthernascimentooficial)
+[LinkedIn Gisele](https://www.linkedin.com/in/gisele-nuness)
+[LinkedIn Esther](https://www.linkedin.com/in/esthernascimentooficial?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
 
-[GitHub](https://github.com/Gisele-Nuness)
-[GitHub](https://github.com/esthernascimento)
+[GitHub Gisele](https://github.com/Gisele-Nuness)
+[GitHub Esther](https://github.com/esthernascimento)
