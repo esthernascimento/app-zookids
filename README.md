@@ -84,7 +84,7 @@ Crianças de 3 a 8 anos que estejam aprendendo sobre os animais.
 
 **Gisele Nunes e Esther Nascimento**  
 [LinkedIn Gisele](https://www.linkedin.com/in/gisele-nuness)
-[LinkedIn Esther](https://www.linkedin.com/in/esthernascimentooficial?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
+[LinkedIn Esther](https://www.linkedin.com/in/esthernascimentooficial/)
 
 [GitHub Gisele](https://github.com/Gisele-Nuness)
 [GitHub Esther](https://github.com/esthernascimento)
