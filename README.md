@@ -82,7 +82,7 @@ Crianças de 3 a 8 anos que estejam aprendendo sobre os animais.
 
 ## 👩‍💻 Desenvolvido por
 
-**Gisele Nunes**  
+**Gisele Nunes e Esther Nascimento**  
 [LinkedIn](https://www.linkedin.com/in/gisele-nuness)  
 [GitHub](https://github.com/Gisele-Nuness)
 
